@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student-Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1>Student Form</h1>
+        <form action="">
+          <table>
+            <tr>
+              <th>Name</th>
+              <td><input type="text" placeholder="Ex:Siva" id="name" required /></td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td><input type="text" placeholder="Ex:21" id="age" required /></td>
+            </tr>
+            <tr>
+              <th name="gender">Gender</th>
+              <td>
+                <input type="radio" name="gender" class="radio" id="Male" required />Male
+                <input
+                  type="radio"
+                  name="gender"
+                  class="radio"
+                  id="Female"
+                  required
+                />Female
+              </td>
+            </tr>
+            <tr>
+              <th>Course</th>
+              <td>
+                <select name="courses" id="course" required>
+                  <option value="Javascript">Javascript</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="Flutter">Flutter</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>E-Mail</th>
+              <td>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  placeholder="Yours@gmail.com"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2" class="save">
+                <button id="save_btn" type="submit">Save</button>
+              </th>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="right">
+        <h1>Student Details</h1>
+        <table  id="output_table" >
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Course</th>
+                <th>E-Mail</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>Siva</td>
+                <td>22</td>
+                <td>Male</td>
+                <td>Javascript</td>
+                <td>siva23@gmail.com</td>
+                <td><button id="delete" onclick="deleted(event)">Delete</button></td>
+            </tr>
+        </table>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
